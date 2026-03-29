@@ -1,5 +1,6 @@
 # ASTra: 
-Omni-Language SAST & Code Review Agent
+
+> Omni-Language Code Review SAST (Static Application Security Testing) & Agent
 * * *
 
 **ASTra** (Abstract Syntax Tree Review Assistant) is an elite, multi-language security agent built for the Nasiko platform. Unlike standard LLM reviewers, ASTra utilizes a **Tree-Sitter AST engine** to deeply parse code structures before analysis, providing high-precision detection of security vulnerabilities, logic bugs, and performance bottlenecks.
