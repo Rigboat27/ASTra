@@ -11,6 +11,8 @@
 
 - **GitHub Integration**: Native support for fetching and auditing remote source files via the GitHub Contents API.
 - **Tree-sitter AST Analysis**: Generates a full syntax tree, complexity metrics, and data-flow constraints to provide context-aware reviews.
+<img width="955" height="677" alt="image" src="https://github.com/user-attachments/assets/abdfb947-e4ad-4c54-b485-a57986fb7ff0" />
+
 - **Omni-Language Support**: Structural analysis for **C, C++, Python, and Java**.
 - **Strict JSON Output**: Reports are delivered in a rigid JSON schema, including status, overview, analysis summary, and hardened patches.
 
