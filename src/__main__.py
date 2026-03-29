@@ -58,6 +58,7 @@ def main(host: str, port: int) -> None:
         tools=agent_data["tools"],
         api_key=os.getenv("OPENAI_API_KEY"),
         system_prompt=agent_data["system_prompt"],
+
     )
 
     request_handler = DefaultRequestHandler(
