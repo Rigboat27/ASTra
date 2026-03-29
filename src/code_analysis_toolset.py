@@ -155,6 +155,7 @@ class CodeAnalysisToolset:
     async def analyze_code_with_ast(
         self,
         source_code: str,
+        language: str = None, **kwargs,
     ) -> str:
         """Parse source code with tree-sitter and return a rich analysis payload.
 
