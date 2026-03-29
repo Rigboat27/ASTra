@@ -50,15 +50,14 @@ def main(host: str, port: int) -> None:
         skills=[skill],
     )
 
-    agent_data = create_agent()
+agent_data = create_agent()
 
-    # Pass Azure URL if available in environment
+    # Cleaned up: No more Azure logic, defaults natively to OpenAI standard
     agent_executor = OpenAIAgentExecutor(
         card=agent_card,
         tools=agent_data["tools"],
         api_key=os.getenv("OPENAI_API_KEY"),
-        system_prompt=agent_data["system_prompt"],
-        base_url=custom_url if custom_url else None
+        system_prompt=agent_data["system_prompt"]
     )
 
     request_handler = DefaultRequestHandler(
