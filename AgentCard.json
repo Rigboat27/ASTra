@@ -1,0 +1,34 @@
+{
+  "name": "ASTra",
+  "description": "An elite, Omni-Language SAST and Code Review Agent. Utilizes Tree-Sitter AST parsing to detect security vulnerabilities, logic bugs, and performance bottlenecks, outputting results in strict JSON.",
+  "url": "http://0.0.0.0:5000/",
+  "version": "1.0.0",
+  "default_input_modes": [
+    "text"
+  ],
+  "default_output_modes": [
+    "text"
+  ],
+  "capabilities": {
+    "streaming": true
+  },
+  "skills": [
+    {
+      "id": "sast_code_audit",
+      "name": "Omni-Language Code Audit",
+      "description": "Fetches and analyzes C, C++, Python, and Java code for vulnerabilities using Abstract Syntax Trees.",
+      "tags": [
+        "security",
+        "sast",
+        "ast",
+        "code-review",
+        "vulnerability-scanner"
+      ],
+      "examples": [
+        "Fetch vuln_sys.c from GitHub repo Rigboat27/repo1 on branch master and analyze the AST for security vulnerabilities.",
+        "Analyze this C code for buffer overflows and memory leaks.",
+        "Review this Python script for command injection risks."
+      ]
+    }
+  ]
+}
