@@ -33,5 +33,4 @@ RUN pip install --no-cache-dir \
 EXPOSE 5000
 
 # Run the A2A server
-
-CMD ["python", "-m", "src", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["python", "src/__main__.py", "--host", "0.0.0.0", "--port", "5000"]
