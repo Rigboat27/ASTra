@@ -50,7 +50,7 @@ def main(host: str, port: int) -> None:
         skills=[skill],
     )
 
-agent_data = create_agent()
+    agent_data = create_agent()
 
     # Cleaned up: No more Azure logic, defaults natively to OpenAI standard
     agent_executor = OpenAIAgentExecutor(
@@ -58,6 +58,7 @@ agent_data = create_agent()
         tools=agent_data["tools"],
         api_key=os.getenv("OPENAI_API_KEY"),
         system_prompt=agent_data["system_prompt"]
+	base_url="https://models.inference.ai.azure.com/"
     )
 
     request_handler = DefaultRequestHandler(
