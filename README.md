@@ -14,7 +14,23 @@ Omni-Language SAST & Code Review Agent
 - **Strict JSON Output**: Reports are delivered in a rigid JSON schema, including status, overview, analysis summary, and hardened patches.
 
 * * *
+---
 
+##  Project Structure
+
+```text
+src/
+├── __main__.py               # Server entry point; defines AgentCard and AgentSkills
+├── code_analysis_agent.py     # Agent persona; defines strict JSON protocol and system prompts
+├── code_analysis_toolset.py   # Implementation of the 4 core analysis tools
+├── tree_maker.py              # Tree-Sitter pipeline; handles AST, IR, and data-flow
+└── openai_agent_executor.py   # OpenAI-based task executor for A2A communication
+Dockerfile
+docker-compose.yml
+pyproject.toml
+AgentCard.json                 # Nasiko A2A agent card
+```
+***
 ## A2A & Nasiko Compliance
 
 ASTra is built to be a first-class citizen in the **Agent-to-Agent (A2A)** ecosystem. It adheres to the following compliance standards:
