@@ -19,8 +19,13 @@ logging.basicConfig()
 @click.option("--host", default="0.0.0.0", show_default=True)
 @click.option("--port", default=5000, show_default=True)
 def main(host: str, port: int) -> None:
+
     if not os.getenv("OPENAI_API_KEY"):
         raise ValueError("OPENAI_API_KEY environment variable not set")
+
+
+    if not os.getenv("GITHUB_TOKEN"):
+        logging.warning("GITHUB_TOKEN not set. GitHub API rate limits will be restricted to 60 requests/hour.")
 
     skill = AgentSkill(
         id="omni_code_reviewer",
