@@ -36,7 +36,7 @@ AgentCard.json                 # Nasiko A2A agent card
 ***
 ## A2A & Nasiko Compliance
 
-ASTra is built to be a first-class citizen in the **Agent-to-Agent (A2A)** ecosystem. It adheres to the following compliance standards:
+ASTra is built to be first in class in the **Agent-to-Agent (A2A)** ecosystem. It adheres to the following compliance standards:
 
 - **Discovery**: Exposes a standardized `AgentCard` and `AgentSkill` set for platform-wide discovery.
     
