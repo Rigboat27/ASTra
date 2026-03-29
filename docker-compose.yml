@@ -3,24 +3,15 @@ services:
     build: .
     container_name: astra-agent
     environment:
-
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      
-
       - GITHUB_TOKEN=${GITHUB_TOKEN}
-      
-      # Optional: Fallback URL for Azure-based inference 
-      - AZURE_INFERENCE_URL=${AZURE_INFERENCE_URL}
-    
     stdin_open: true
     tty: true
     ports:
-      # Maps the internal A2A port to the external gateway 
       - "5000:5000"
     networks:
       - agents-net
 
 networks:
   agents-net:
-    # Required for A2A communication on the Nasiko platform 
     external: true
