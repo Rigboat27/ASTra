@@ -57,8 +57,7 @@ def main(host: str, port: int) -> None:
         card=agent_card,
         tools=agent_data["tools"],
         api_key=os.getenv("OPENAI_API_KEY"),
-        system_prompt=agent_data["system_prompt"]
-	base_url="https://models.inference.ai.azure.com/"
+        system_prompt=agent_data["system_prompt"],
     )
 
     request_handler = DefaultRequestHandler(
