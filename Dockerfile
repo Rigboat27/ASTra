@@ -1,7 +1,7 @@
 FROM python:3.10-slim
 
 WORKDIR /app
-
+ENV PYTHONUNBUFFERED=1
 # Install system-level build tools needed to compile tree-sitter grammars 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
@@ -33,4 +33,5 @@ RUN pip install --no-cache-dir \
 EXPOSE 5000
 
 # Run the A2A server
-CMD ["python", "src/__main__.py", "--host", "0.0.0.0", "--port", "5000"]
+
+CMD ["python", "-m", "src", "--host", "0.0.0.0", "--port", "5000"]
